@@ -1,0 +1,29 @@
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    max-width: 600px;
+    width: 100%;
+    color: #333;
+    font-size: 16px;
+}
+h2 {
+    text-align: center;
+    color: #00796b;
+}
+label {
+    color: #00695c;
+    margin-bottom: 10px;
+    display: block;
+}
