@@ -1,0 +1,128 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h2 {
+    margin: 0;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+header .hamburger-btn,
+header .close-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Overlay background */
+.blur-bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Dashboard styling */
+.dashboard-card {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-card h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-body {
+    padding: 20px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.card-title {
+    font-size: 1.3rem;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header .hamburger-btn {
+        display: block;
+    }
+
+    header ul.links {
+        display: none;
+        flex-direction: column;
+        background-color: #343a40;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    header ul.links.open {
+        display: flex;
+    }
+
+    header ul.links li {
+        padding: 10px 20px;
+    }
+
+    .blur-bg-overlay.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
